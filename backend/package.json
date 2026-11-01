@@ -1,0 +1,15 @@
+{
+  "name": "ahj-rxjs-backend",
+  "version": "1.0.0",
+  "description": "REST endpoint /messages/unread для ДЗ «11. RxJS» (Polling)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

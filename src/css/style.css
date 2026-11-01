@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  color: #2c3e50;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.widget {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #3d8e5f;
+  color: #fff;
+}
+
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.widget-status {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.widget-status[data-state='online'] {
+  background: #c8f7d4;
+  color: #14532d;
+}
+
+.widget-status[data-state='offline'] {
+  background: #ffd6d6;
+  color: #7f1d1d;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.messages-table th,
+.messages-table td {
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messages-table thead th {
+  background: #eaf3ee;
+  color: #3d8e5f;
+  font-weight: 600;
+  text-transform: lowercase;
+  border-bottom: 2px solid #3d8e5f;
+}
+
+.col-from {
+  width: 32%;
+}
+
+.col-received {
+  width: 26%;
+}
+
+.message-row td {
+  border-bottom: 1px solid #eee;
+}
+
+.message-row:nth-child(odd) {
+  background: #f8fbf9;
+}
+
+.message-row {
+  animation: fade-in 0.4s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.widget-empty {
+  padding: 24px 20px;
+  text-align: center;
+  color: #8a94a6;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}

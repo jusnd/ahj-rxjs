@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polling — непрочитанные сообщения (RxJS)</title>
+</head>
+<body>
+  <main class="page">
+    <section id="messages-widget" class="widget">
+      <header class="widget-header">
+        <h1 class="widget-title">Unread messages</h1>
+        <span class="widget-status" data-status>connecting…</span>
+      </header>
+      <table class="messages-table">
+        <thead>
+          <tr>
+            <th class="col-from">from</th>
+            <th class="col-subject">subject</th>
+            <th class="col-received">received</th>
+          </tr>
+        </thead>
+        <tbody data-messages></tbody>
+      </table>
+      <p class="widget-empty" data-empty>Пока нет непрочитанных сообщений — идёт опрос сервера…</p>
+    </section>
+  </main>
+</body>
+</html>
